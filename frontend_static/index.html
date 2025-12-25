@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runtime Verification Layer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header style="text-align: center; margin-bottom: 3rem;">
+            <h1
+                style="font-size: 2.5rem; margin-bottom: 0.5rem; background: linear-gradient(45deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+                Runtime Verification Layer
+            </h1>
+            <p style="color: var(--text-muted);">Real-time AI Bias Auditing & Interception</p>
+        </header>
+
+        <div
+            style="display: grid; grid-template-columns: minmax(300px, 1fr) 2fr; gap: 2rem; width: 100%; max-width: 1200px; margin: 0 auto;">
+
+            <!-- Input Column -->
+            <div class="glass-card">
+                <h2 style="margin-top: 0;">Candidate Profile</h2>
+                <form id="candidateForm">
+                    <label>Age</label>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <input type="range" id="age" name="age" min="18" max="70" value="30">
+                        <span id="ageDisplay">30</span>
+                    </div>
+
+                    <label>Experience (Years)</label>
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <input type="range" id="experience" name="experience" min="0" max="40" value="5">
+                        <span id="expDisplay">5</span>
+                    </div>
+
+                    <label>Education</label>
+                    <select id="education" name="education">
+                        <option value="1">Bachelor's</option>
+                        <option value="2">Master's</option>
+                        <option value="3">PhD</option>
+                    </select>
+
+                    <label>Gender</label>
+                    <select id="gender" name="gender">
+                        <option value="0">Male</option>
+                        <option value="1">Female</option>
+                    </select>
+
+                    <button type="submit" id="submitBtn" style="width: 100%; margin-top: 1rem;">Process
+                        Application</button>
+                </form>
+            </div>
+
+            <!-- Results Column -->
+            <div id="resultsColumn" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <!-- Initial State -->
+                <div id="initialState" class="glass-card"
+                    style="display: flex; align-items: center; justify-content: center; height: 100%; min-height: 300px; opacity: 0.5;">
+                    <p>Awaiting Input Stream...</p>
+                </div>
+
+                <!-- Loading State -->
+                <div id="loadingState" class="glass-card"
+                    style="display: none; flex-direction: column; align-items: center; justify-content: center; height: 100%; min-height: 300px;">
+                    <div class="spinner"></div>
+                    <p style="margin-top: 1rem;">Generating Shadow Twins...</p>
+                </div>
+
+                <!-- Error State -->
+                <div id="errorState" class="glass-card" style="display: none; border-left: 4px solid var(--danger);">
+                    <strong style="color: var(--danger);">Error:</strong> <span id="errorMsg"></span>
+                </div>
+
+                <!-- Results State -->
+                <div id="resultState" style="display: none; flex-direction: column; gap: 1.5rem;">
+
+                    <!-- Main Decision Card -->
+                    <div id="decisionCard" class="glass-card"
+                        style="display: flex; justify-content: space-between; align-items: center;">
+                        <div>
+                            <h3
+                                style="margin: 0; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted);">
+                                Model Decision</h3>
+                            <div id="decisionText" style="font-size: 2rem; font-weight: bold;"></div>
+                        </div>
+                        <div style="text-align: right;">
+                            <div style="font-size: 0.875rem; color: var(--text-muted);">Confidence</div>
+                            <div id="confidenceScore" style="font-size: 1.5rem; font-weight: bold;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Audit Card -->
+                    <div class="glass-card" style="position: relative; overflow: hidden;">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                            <div id="auditIcon"></div>
+                            <h3 style="margin: 0;">Runtime Audit Report</h3>
+                        </div>
+
+                        <div id="auditStatusBox" style="padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                        </div>
+
+                        <h4>Shadow Twin Analysis</h4>
+                        <div id="shadowTwinsGrid"
+                            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                            <!-- Twins injected here -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
