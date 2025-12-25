@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiasGuard - AI Auditor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>BiasGuard</span>
+            </div>
+            <ul class="nav-links">
+                <li class="active" data-tab="dashboard">
+                    <i class="fa-solid fa-chart-line"></i> Dashboard
+                </li>
+                <li data-tab="audit">
+                    <i class="fa-solid fa-magnifying-glass-chart"></i> Historical Audit
+                </li>
+                <li data-tab="screen">
+                    <i class="fa-solid fa-filter"></i> Real-Time Screen
+                </li>
+                <li data-tab="report">
+                    <i class="fa-solid fa-file-contract"></i> Scorecard
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            
+            <!-- Dashboard View -->
+            <section id="dashboard" class="view active">
+                <div class="header">
+                    <h1>System Overview</h1>
+                    <div class="status-badge pulse">active</div>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="card stat-card">
+                        <h3>Compliance Score</h3>
+                        <div class="value">92%</div>
+                        <div class="trend positive">↑ 2%</div>
+                    </div>
+                    <div class="card stat-card">
+                        <h3>Audited Models</h3>
+                        <div class="value">1</div>
+                        <div class="trend neutral">-</div>
+                    </div>
+                    <div class="card stat-card">
+                        <h3>Active Alerts</h3>
+                        <div class="value alert">0</div>
+                    </div>
+                </div>
+
+                <div class="card action-card">
+                    <h2>Quick Actions</h2>
+                    <div class="button-group">
+                        <button class="btn primary" onclick="generateAndAudit()">
+                            <i class="fa-solid fa-bolt"></i> Run Full Audit Demo
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Audit View -->
+            <section id="audit" class="view">
+                <div class="header">
+                    <h1>Historical Bias Audit</h1>
+                </div>
+                
+                <div class="card upload-card">
+                    <h3>Input Data</h3>
+                    <p>Upload a JSON/CSV file or generate synthetic data.</p>
+                    <div class="button-group">
+                        <input type="file" id="fileUpload" hidden>
+                        <button class="btn secondary" onclick="document.getElementById('fileUpload').click()">
+                            <i class="fa-solid fa-upload"></i> Upload File
+                        </button>
+                        <button class="btn primary" onclick="generateAndAudit()">
+                            <i class="fa-solid fa-dice"></i> Generate Synthetic Data
+                        </button>
+                    </div>
+                </div>
+
+                <div id="auditResults" class="results-container hidden">
+                    <div class="card metric-card">
+                        <h3>Disparate Impact</h3>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="di-bar" style="width: 0%"></div>
+                        </div>
+                        <div class="metric-value" id="di-val">--</div>
+                        <p class="metric-desc">Ideal: 1.0 (0.8 - 1.25 is safe)</p>
+                    </div>
+
+                    <div class="card metric-card">
+                        <h3>Statistical Parity Diff</h3>
+                        <div class="metric-value" id="spd-val">--</div>
+                        <p class="metric-desc">Ideal: 0.0</p>
+                    </div>
+
+                    <div class="card metric-card">
+                        <h3>Perturbation Flip Rate</h3>
+                        <div class="metric-value" id="flip-val">--</div>
+                        <p class="metric-desc">Sensitivity to protected attribute changes</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Screen View -->
+            <section id="screen" class="view">
+                <div class="header">
+                    <h1>Real-Time Screening</h1>
+                </div>
+                
+                <div class="controls">
+                    <button class="btn primary" id="btn-start-stream" onclick="toggleStream()">
+                        <i class="fa-solid fa-play"></i> Start Live Data Stream
+                    </button>
+                </div>
+
+                <div class="stream-container grid-2">
+                    <div class="card log-card">
+                        <h3>Incoming Stream</h3>
+                        <ul id="stream-log" class="log-list">
+                            <!-- Stream items go here -->
+                        </ul>
+                    </div>
+                    <div class="card risk-card">
+                        <h3>Risk Analysis</h3>
+                        <div id="drift-status" class="drift-indicator safe">
+                            <i class="fa-solid fa-check-circle"></i> No Drift Detected
+                        </div>
+                        <div id="drift-details" class="details-text">
+                            Waiting for data package...
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Report View -->
+            <section id="report" class="view">
+                <div class="header">
+                    <h1>Bias Scorecard</h1>
+                    <button class="btn secondary" onclick="loadReport()">
+                        <i class="fa-solid fa-rotate"></i> Refresh
+                    </button>
+                </div>
+                <div class="card report-card">
+                    <pre id="json-report">No report generated yet.</pre>
+                </div>
+            </section>
+
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

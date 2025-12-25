@@ -1,0 +1,34 @@
+{
+    "historical_audit": {
+        "disparate_impact": 0.0,
+        "statistical_parity_difference": 0.0,
+        "equal_opportunity_difference": 0.0,
+        "perturbation_test": {
+            "flip_rate": 0.0035211267605633804,
+            "flipped_indices": [
+                614
+            ],
+            "analyzed_count": 284
+        }
+    },
+    "screening_checks": {
+        "drift": {
+            "experience": {
+                "drift_detected": true,
+                "p_value": 5.575207489880375e-06,
+                "statistic": 0.35598032326071677
+            },
+            "education": {
+                "drift_detected": false,
+                "p_value": 1.0,
+                "statistic": 0.014307800421644413
+            },
+            "gender": {
+                "drift_detected": false,
+                "p_value": 1.0,
+                "statistic": 0.010513000702740688
+            }
+        },
+        "proxies": {}
+    }
+}

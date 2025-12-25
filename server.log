@@ -1,0 +1,212 @@
+WARNING:root:SHAP or LIME not found. Explainability features will be limited.
+INFO:     Started server process [20310]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:40720 - "HEAD / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33080 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33080 - "GET /style.css HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33086 - "GET /app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33086 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:44008 - "GET /api/generate_data?n_samples=20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44008 - "POST /api/screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44008 - "GET /api/generate_data?n_samples=20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44008 - "POST /api/screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44008 - "GET /api/generate_data?n_samples=20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44008 - "POST /api/screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44008 - "GET /api/generate_data?n_samples=20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44008 - "POST /api/screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44008 - "GET /api/generate_data?n_samples=20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44008 - "POST /api/screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44008 - "GET /api/generate_data?n_samples=20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44008 - "POST /api/screen HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44008 - "GET /api/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44008 - "GET /api/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44008 - "GET /api/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44008 - "GET /api/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44008 - "GET /api/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52874 - "GET /api/generate_data?n_samples=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52874 - "POST /api/audit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52874 - "GET /api/generate_data?n_samples=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52874 - "POST /api/audit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52874 - "GET /api/generate_data?n_samples=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52874 - "POST /api/audit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52874 - "GET /api/generate_data?n_samples=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52874 - "POST /api/audit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33520 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:33520 - "GET /style.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:33536 - "GET /app.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:39686 - "GET /api/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52088 - "GET /api/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52088 - "GET /api/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52088 - "GET /api/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52088 - "GET /api/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52088 - "GET /api/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52088 - "GET /api/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52088 - "GET /api/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53814 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:53814 - "GET /style.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:53814 - "GET /app.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:36240 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:36240 - "GET /style.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:36254 - "GET /app.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:36254 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:40982 - "GET / HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:40982 - "GET /style.css HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:40988 - "GET /app.js HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41908 - "POST /api/audit HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    return self._engine.get_loc(casted_key)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7096, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'experience'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/uvicorn/protocols/http/h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/fastapi/applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/fastapi/routing.py", line 119, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/fastapi/routing.py", line 105, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/fastapi/routing.py", line 426, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/fastapi/routing.py", line 312, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cheenu/bias detector tool /src/api.py", line 69, in run_audit
+    df['hired_pred'] = ((df['experience'] > 4) & (df['gender'] == 1)).astype(int)
+                         ~~^^^^^^^^^^^^^^
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/pandas/core/frame.py", line 4113, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/pandas/core/indexes/base.py", line 3819, in get_loc
+    raise KeyError(key) from err
+KeyError: 'experience'
+INFO:     127.0.0.1:33498 - "GET /app.js HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:33498 - "GET /api/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33512 - "POST /api/audit HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/pandas/core/indexes/base.py", line 3812, in get_loc
+    return self._engine.get_loc(casted_key)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "pandas/_libs/index.pyx", line 167, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/index.pyx", line 196, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas/_libs/hashtable_class_helper.pxi", line 7096, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'experience'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/uvicorn/protocols/http/h11_impl.py", line 410, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/fastapi/applications.py", line 1135, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 93, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/starlette/middleware/cors.py", line 144, in simple_response
+    await self.app(scope, receive, send)
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/fastapi/routing.py", line 119, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/fastapi/routing.py", line 105, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/fastapi/routing.py", line 426, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/fastapi/routing.py", line 312, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/cheenu/bias detector tool /src/api.py", line 69, in run_audit
+    df['hired_pred'] = ((df['experience'] > 4) & (df['gender'] == 1)).astype(int)
+                         ~~^^^^^^^^^^^^^^
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/pandas/core/frame.py", line 4113, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "/home/cheenu/bias detector tool /venv/lib/python3.13/site-packages/pandas/core/indexes/base.py", line 3819, in get_loc
+    raise KeyError(key) from err
+KeyError: 'experience'
