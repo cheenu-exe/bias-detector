@@ -1,0 +1,14 @@
+Black Box Bias:
+
+	AI systems are not like normal logica thinking or automation models.They are too coplex to understand and sometimes even the devolopers cant understand why the AI modal gives the answer and how it processed.Due to this reason AI modals acts as a biased one.In the current AI devoloping world this is an important issue because the biased results given by the AI modals are not just results they feed for the next gen AI modals.
+	
+	
+Social & Practical Problems:
+
+	Now most of the companies use AI modals for sorting resumes but the AI experts recoded that 33% of the AI modals results are biased ie.,the AI modal rejected some eligible skilled people over others
+	In hospitals AI modals are used to determine the risk factors of the patient's illness to know that who should get the treatment earlier but the AI modal give 85% of biased answer ie., it rejceted most of the black people over white people by considering itself black peoples are not much rich and the have quick recover abilty.
+	
+	
+Solution:
+	Black Box AI Bias detection systtem: Using only the input and output of the ai AI moadal without knowing the complex system inside the AI modal find that the AI modal is biased or not and further find the answer is biased or not for each entry
+	
